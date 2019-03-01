@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Gulp Sass Bootsrap Startup</title>
+    <!-- Bootstrap files -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- CSS files -->
     <link rel="stylesheet" href="/css/main.css">
-    <!-- Bootstrap files -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
   </head>
   <body>
-    <h1>Welcome to Gulp Sass Bootstrap!</h1>
-    <nav>
+    <h1 class="jumbotron-fluid display-4 text-center py-5 mb-0">Welcome to Gulp Sass Bootstrap!</h1>
+    <!-- <nav>
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
@@ -18,7 +18,34 @@
         <li><a href="#">Resources</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
+    </nav> -->
+
+    <!-- Bootsrap Navbar  -->
+    <nav id="navbar-example2" class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="#fat">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#mdo">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#one">Services1</a>
+            <a class="dropdown-item" href="#two">Services2</a>
+            <div role="separator" class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#three">Services3</a>
+          </div>
+        </li>
+      </ul>
     </nav>
+    <div class="">
+      <div class="shape1"></div>
+      <div class="shape2"></div>
+      <div class="shape3"></div>
+    </div>
 
     <!-- JavaScript Files -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

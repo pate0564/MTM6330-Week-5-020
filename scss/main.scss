@@ -1,5 +1,18 @@
+//  Call to Partials and Mixins
 @import "variables";
 
+// Mixins
+@mixin liftup($height: high) {
+  @if $height == high {
+    box-shadow: 1px 2px 5px 2px black;
+  } @else if $height == higher {
+    box-shadow: 2px 4px 10px 2px black;
+  } @else if $height == highest {
+    box-shadow: 4px 8px 30px 2px black;
+  }
+}
+
+// Common CSS
 body {
   font-family: $font-text;
   background-color: $asphalt;
@@ -10,6 +23,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-headings;
 }
 
+//  Navigation bar
 nav {
   $text-font-size: 20px;
   font-size: $text-font-size;
@@ -23,7 +37,7 @@ nav {
         display: block;
         padding: 20px;
         color: $asphalt;
-        border-#{$nav-border-side}: 1px solid $asphalt;
+        // border-#{$nav-border-side}: 1px solid $asphalt;
         transition: all 300ms ease-in-out;
         &:hover {
           color: $clouds;
@@ -32,4 +46,26 @@ nav {
       }
     }
   }
+}
+
+// Layout css
+.shape {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: $text-font-size;
+  background-color: lighten($asphalt, 50%);
+  border: 1px solid lighten($asphalt, 20%);
+}
+.shape1 {
+  @extend .shape;
+  @include liftup(high); // Mixins
+}
+.shape2 {
+  @extend .shape;
+  @include liftup(higher); // Mixins
+}
+.shape3 {
+  @extend .shape;
+  @include liftup(highest); // Mixins
 }
